@@ -1,0 +1,17 @@
+{
+  "name": "my_project",
+  "version": "1.0.1",
+  "license": "MIT",
+  "scripts": {
+    "develop:backend": "yarn --cwd strapi-app develop",
+    "develop:frontend": "wait-on http://localhost:1337/admin && yarn --cwd nextjs-app start",
+    "open":"cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
+    "develop": "yarn --cwd nextjs-app && yarn dev"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "cross-env": "^7.0.3",
+    "wait-on": "^7.0.1"
+  },
+  "dependencies": {}
+}
