@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 18
-    - name: Install Composer Dependencies
-      working-directory: ./nextjs-app
-      run: yarn install
-      run: yarn build --if-present
+    # - name: Install Composer Dependencies
+      # working-directory: ./nextjs-app
+      # run: yarn install
+      # run: yarn build --if-present
