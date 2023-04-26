@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Node.js CD
+name: Let's go CD
 
 # Controls when the action will run. 
 on:
@@ -29,6 +29,5 @@ jobs:
           cd ~/home/ubuntu/my_project 
           git pull origin main
           git status
-        # yarn install --only=prod
           yarn install
           pm2 restart frontend
