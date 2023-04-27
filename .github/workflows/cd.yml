@@ -27,7 +27,8 @@ jobs:
         port: 22
         script: |
           cd /home/ubuntu/my_project
-          git pull origin main
+          git fetch origin
+          git reset --hard origin/main
           git status
           yarn install
           pm2 restart frontend

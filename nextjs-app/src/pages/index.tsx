@@ -10,7 +10,7 @@ export default function Home ( { restaurants }: any ) {
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${ inter.className }`}
     >
       <h1>--------------------------</h1>
-      <h1>CI CD成功した？？</h1>
+      <h1>CD成功した？？ローカルでbuildしてプッシュしただけだけどの変更から反映までできてるかな</h1>
       <ul>
         {/* {restaurants.data.map( ( restaurant: any ) => (
           <li key={restaurant.id}>{restaurant.attributes.Name}</li>
