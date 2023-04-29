@@ -5,7 +5,7 @@ exports.id = 820;
 exports.ids = [820];
 exports.modules = {
 
-/***/ 499:
+/***/ 3499:
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -19,8 +19,8 @@ Object.defineProperty(exports, "default", ({
     }
 }));
 const _interop_require_default = __webpack_require__(167);
-const _react = /*#__PURE__*/ _interop_require_default._(__webpack_require__(689));
-const _head = /*#__PURE__*/ _interop_require_default._(__webpack_require__(636));
+const _react = /*#__PURE__*/ _interop_require_default._(__webpack_require__(6689));
+const _head = /*#__PURE__*/ _interop_require_default._(__webpack_require__(2636));
 const statusCodes = {
     400: "Bad Request",
     404: "This page could not be found",
@@ -120,28 +120,28 @@ if ((typeof exports.default === "function" || typeof exports.default === "object
 
 /***/ }),
 
-/***/ 918:
+/***/ 3918:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/amp-context.js");
 
 /***/ }),
 
-/***/ 732:
+/***/ 5732:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/amp-mode.js");
 
 /***/ }),
 
-/***/ 796:
+/***/ 2796:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/head-manager-context.js");
 
 /***/ }),
 
-/***/ 470:
+/***/ 2470:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/side-effect.js");
@@ -155,7 +155,7 @@ module.exports = require("next/dist/shared/lib/utils/warn-once.js");
 
 /***/ }),
 
-/***/ 689:
+/***/ 6689:
 /***/ ((module) => {
 
 module.exports = require("react");
@@ -169,7 +169,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [636], () => (__webpack_exec__(499)));
+var __webpack_exports__ = __webpack_require__.X(0, [636], () => (__webpack_exec__(3499)));
 module.exports = __webpack_exports__;
 
 })();
