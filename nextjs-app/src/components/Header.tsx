@@ -49,7 +49,7 @@ export default function Header () {
   const scope = useMenuAnimation( isOpen );
 
   return (
-    <div className="fixed grid grid-flow-col justify-between overflow-visible opacity-80 border-gray-200 p-5 mx-auto w-full dark:bg-black bg-white h-12 z-50">
+    <div className="fixed grid grid-flow-col justify-between overflow-visible opacity-80 border-gray-200 p-5 mx-auto w-full dark:bg-black bg-white h-14 z-50">
       <Link href="/" className="h-auto grid grid-flow-col gap-2">
         <Image
           src={sakuraeng_png}
@@ -57,7 +57,7 @@ export default function Header () {
           className="h-10 w-10"
         />
 
-        <span className="text-lg font-semibold whitespace-nowrap ">桜エンジニアリング</span>
+        <span className="text-lg font-semibold whitespace-nowrap">桜エンジニアリング</span>
       </Link>
 
       {/* スマホ画面ハンバーガーメニュ */}
@@ -69,13 +69,13 @@ export default function Header () {
       {/* <div className="hidden md:block w-full md:w-auto" ref={scope}> */}
       {/* <div className="md:block w-full md:w-auto" ref={scope}> */}
 
-      <ul className="grid grid-flow-row md:grid-flow-col gap-2 md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+      <ul className="hidden md:grid grid-flow-row md:grid-flow-col gap-2 md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
 
         <li>
           <Link href="/about" className="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">私たちについて</Link>
         </li>
 
-        <li className="grid gap-1" ref={scope}>
+        <li className="grid gap-3" ref={scope}>
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={() => setIsOpen( !isOpen )}

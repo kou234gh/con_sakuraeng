@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import axios from 'axios'
-import Header from '@/components/Header'
-import { Footer } from '@/components/Footer'
+import Link from 'next/link'
 
 
 
@@ -13,8 +12,7 @@ export default function Home ( { restaurants }: any ) {
 
   return (
     <main className={`grid grid-flow-row ${ inter.className }`}>
-      <Header />
-      <div className="pt-24">
+      <div className="p-12 pt-24">
         <div className="relative m-6 lg:m-24 md:hidden">
           <svg xmlns="http://www.w3.org/2000/svg"
             data-name="Layer 1"
@@ -34,21 +32,27 @@ export default function Home ( { restaurants }: any ) {
           {/* <!--Left Col--> */}
           <div className="grid grid-flow-row w-full">
             <p className="uppercase tracking-loose w-full">
-              
+
             </p>
             <h1 className="my-4 text-4xl font-bold">
-              最適な方法でホームページ作成いたします。
+              最適な方法でホームページを作成します。
             </h1>
 
             <p className="leading-normal text-2xl mb-8">
-              長期的なコストを削減。
+              長期的なコストの削減。
             </p>
-            <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-              Subscribe
-            </button>
+            <div className='flex md:flex-row flex-col items-center md:items-start gap-4 md:gap-6 my-8'>
+              <Link href={"#"} className="p-4 px-8 m-2 max-w-max lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                サービス詳細
+              </Link>
+              <Link href={"#"} className="p-4 px-8 m-2 max-w-max lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                お見積診断
+              </Link>
+            </div>
+
           </div>
           {/* <!--Right Col--> */}
-          <div className="mt-12 lg:-mt-24 hidden md:relative">
+          <div className="hidden md:block h-full p-12 md:relative">
             <svg xmlns="http://www.w3.org/2000/svg"
               data-name="Layer 1"
               className='h-full w-full'
@@ -692,7 +696,6 @@ export default function Home ( { restaurants }: any ) {
           </p>
         </a>
       </div> */}
-      <Footer/>
     </main>
   )
 }

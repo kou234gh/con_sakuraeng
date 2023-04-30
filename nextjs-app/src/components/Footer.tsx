@@ -4,17 +4,17 @@ import sakuraeng_png from "../../public/sakuraeng.png"
 export const Footer = () => {
   return (
     <footer className="bg-white">
-      <div className="container mx-auto px-8">
-        <div className="w-full flex flex-col md:flex-row py-6">
-          <div className="flex-1 mb-6 text-black">
-            <Link href="/" className="flex h-20 item-center">
+      <div className="p-[10vw]">
+        <div className="w-full flex flex-col md:flex-row py-6 items-start">
+          <div className="flex flex-1 items-start mb-6 text-black">
+            <Link href="/" className="flex h-20 items-end">
               <Image
                 src={sakuraeng_png}
                 alt="sakura eng logo"
                 className="h-10 w-10"
               />
 
-              <span className="self-center text-lg font-semibold whitespace-nowrap">桜エンジニアリング</span>
+              <span className="text-lg font-semibold whitespace-nowrap">桜エンジニアリング</span>
             </Link>
           </div>
           <div className="hidden flex-1">
