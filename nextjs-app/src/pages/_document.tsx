@@ -1,5 +1,5 @@
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+// import { Footer } from '@/components/Footer'
+// import Header from '@/components/Header'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -7,9 +7,9 @@ export default function Document() {
     <Html lang="ja">
       <Head />
       <body>
-        <Header/>
+        {/* <Header/> */}
         <Main />
-        <Footer/>
+        {/* <Footer/> */}
         <NextScript />
       </body>
     </Html>
