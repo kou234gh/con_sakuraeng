@@ -220,7 +220,7 @@ const Footer = ()=>{
 
 /***/ }),
 
-/***/ 2119:
+/***/ 7184:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -245,6 +245,7 @@ framer_motion__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.the
 
 
 
+// import { useDimensions } from "./useDimention";
 
 const staggerMenuItems = (0,framer_motion__WEBPACK_IMPORTED_MODULE_4__.stagger)(0.1, {
     startDelay: 0.15
@@ -278,15 +279,17 @@ function useMenuAnimation(isOpen) {
     return scope;
 }
 const Path = (props)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.path, {
-        fill: "transparent",
+        // fill="#fff"
         strokeWidth: "3",
-        stroke: "hsl(0, 0%, 18%)",
+        // stroke="rgb(255 255 255)"
+        className: "dark:fill-white dark:stroke-gray-100",
         strokeLinecap: "round",
         ...props
     });
 const sidebar = {
     open: (height = 1000)=>({
             clipPath: `circle(${height * 2 + 200}px at calc( 100% - 30px ) 40px)`,
+            height: "100vh",
             transition: {
                 type: "spring",
                 stiffness: 20,
@@ -296,8 +299,9 @@ const sidebar = {
     closed: {
         // clipPath: "circle(30px at 40px 40px)",
         clipPath: "circle(23px at calc( 100% - 28px ) 32px)",
+        height: "0vh",
         transition: {
-            delay: 0.2,
+            delay: 0.1,
             type: "spring",
             stiffness: 400,
             damping: 40
@@ -323,6 +327,7 @@ const variants2 = {
         y: 0,
         opacity: 1,
         transition: {
+            delay: 0.1,
             y: {
                 stiffness: 1000,
                 velocity: -100
@@ -339,33 +344,23 @@ const variants2 = {
         }
     }
 };
-const colors = [
+const colors = (/* unused pure expression or super */ null && ([
     "#FF008C",
     "#D309E1",
     "#9C1AFF",
     "#7700FF",
     "#4400FF"
-];
+]));
 const Header = ()=>{
     const [isOpen, setIsOpen] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
     const scope = useMenuAnimation(isOpen);
     const [isToggleOpen, toggleOpen] = (0,framer_motion__WEBPACK_IMPORTED_MODULE_4__.useCycle)(false, true);
-    const containerRef = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
-    // const { height } = useDimensions(containerRef);
-    const itemIds = [
-        0,
-        1,
-        2,
-        3,
-        4
-    ];
-    const style = {};
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "fixed grid grid-flow-col items-start justify-between overflow-visible opacity-80 border-gray-200 p-5 mx-auto w-full dark:bg-black bg-white h-14 z-50",
+        className: "fixed flex flex-row items-start justify-between overflow-visible opacity-80 border-gray-200 px-8 mx-auto w-full dark:bg-black bg-white h-14 z-40",
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                 href: "/",
-                className: "h-auto grid grid-flow-col gap-2 items-center",
+                className: "h-auto pt-2 grid grid-flow-col gap-2 items-center",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
                         src: _public_sakuraeng_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z,
@@ -373,47 +368,89 @@ const Header = ()=>{
                         className: "h-10 w-10"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                        className: "hidden md:block text-lg font-semibold whitespace-nowrap",
+                        className: "hidden md:block text-black text-lg font-semibold whitespace-nowrap dark:text-white",
                         children: "桜エンジニアリング"
                     })
                 ]
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.nav, {
                 initial: false,
-                className: "md:hidden fixed top-0 right-0 bottom-0 bg-transparent opacity-100 w-[70vw] h-screen",
+                className: "md:hidden fixed top-0 right-0 bottom-0 opacity-100 w-[70vw] h-screen z-50",
                 animate: isToggleOpen ? "open" : "closed",
-                // custom={height}
-                ref: containerRef,
+                variants: sidebar,
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.div, {
-                        className: "background fixed top-0 right-0 bottom-0 w-[70vw] bg-red-600 opacity-100",
-                        variants: sidebar
+                        className: "background h-screen w-[70vw] bg-gray-900 text-gray-900 dark:bg-gray-900 dark:text-gray-100 opacity-100",
+                        variants: sidebar,
+                        animate: isToggleOpen ? "open" : "closed"
                     }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.ul, {
-                        variants: variants,
-                        className: "fixed top-20",
-                        children: itemIds.map((i)=>// <MenuItem i={i} key={i} />
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.li, {
-                                className: "list-none mb-2 flex items-center cursor-pointer",
-                                variants: variants2,
-                                whileHover: {
-                                    scale: 1.1
-                                },
-                                whileTap: {
-                                    scale: 0.95
-                                },
-                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                    className: "text-placeholder rounded w-80 h-8 flex-[1]",
-                                    style: {
-                                        border: `2px solid ${colors[i]}`
-                                    }
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.ul, {
+                        variants: variants2,
+                        className: "fixed top-20 pl-8",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                    href: "/about",
+                                    className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
+                                    children: "私たちについて"
                                 })
-                            }, i))
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
+                                className: "grid gap-3",
+                                ref: scope,
+                                children: [
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.button, {
+                                        whileTap: {
+                                            scale: 0.97
+                                        },
+                                        onClick: ()=>setIsOpen(!isOpen),
+                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                            href: "#services",
+                                            className: "block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-400 text-gray-800",
+                                            children: "サービス"
+                                        })
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
+                                        style: {
+                                            pointerEvents: isOpen ? "auto" : "none",
+                                            clipPath: "inset(10% 50% 90% 50% round 10px)",
+                                            color: "black",
+                                            backgroundColor: "black"
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                                    href: "services/homepage",
+                                                    className: "block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-400 text-gray-800",
+                                                    children: "ホームページ"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                                    href: "services/kourituka",
+                                                    className: "block p-3 text-gray-800 hover:bg-gray-100  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300",
+                                                    children: "業務効率化"
+                                                })
+                                            })
+                                        ]
+                                    }),
+                                    " "
+                                ]
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                    href: "#",
+                                    className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
+                                    children: "お問い合わせ"
+                                })
+                            })
+                        ]
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
                         onClick: ()=>toggleOpen(),
                         className: "fixed top-5 right-4 ",
                         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
+                            className: "",
                             width: "23",
                             height: "23",
                             viewBox: "0 0 21 19",
@@ -458,12 +495,12 @@ const Header = ()=>{
                 ]
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                className: "hidden md:grid grid-flow-row md:grid-flow-col gap-2 md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium",
+                className: "hidden md:grid grid-flow-row md:grid-flow-col pt-4 gap-2 md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                            href: "/about",
-                            className: "text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0",
+                            href: "#services",
+                            className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
                             children: "私たちについて"
                         })
                     }),
@@ -479,24 +516,23 @@ const Header = ()=>{
                                 children: "サービス"
                             }),
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
+                                className: "dark:bg-gray-900 dark:text-gray-100 bg-gray-200 text-gray-900",
                                 style: {
                                     pointerEvents: isOpen ? "auto" : "none",
-                                    clipPath: "inset(10% 50% 90% 50% round 10px)",
-                                    color: "black",
-                                    backgroundColor: "black"
+                                    clipPath: "inset(10% 50% 90% 50% round 10px)"
                                 },
                                 children: [
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-400 text-gray-800",
+                                            href: "#services",
+                                            className: "block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ",
                                             children: "ホームページ"
                                         })
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "block p-3 text-gray-800 hover:bg-gray-100  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300",
+                                            href: "#services",
+                                            className: "block p-3  hover:bg-gray-100  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300",
                                             children: "業務効率化"
                                         })
                                     })
@@ -507,8 +543,8 @@ const Header = ()=>{
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                            href: "#",
-                            className: "text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0",
+                            href: "#contact",
+                            className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
                             children: "お問い合わせ"
                         })
                     })
@@ -536,10 +572,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(108);
 /* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2119);
+/* harmony import */ var _components_Header_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7184);
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6127);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Header__WEBPACK_IMPORTED_MODULE_2__]);
-_components_Header__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Header_index__WEBPACK_IMPORTED_MODULE_2__]);
+_components_Header_index__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
@@ -547,7 +583,7 @@ _components_Header__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies_
 function App({ Component , pageProps  }) {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Header__WEBPACK_IMPORTED_MODULE_2__/* .Header */ .h, {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Header_index__WEBPACK_IMPORTED_MODULE_2__/* .Header */ .h, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
                 ...pageProps
             }),

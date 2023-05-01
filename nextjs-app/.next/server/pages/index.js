@@ -43,7 +43,7 @@ function Home({ restaurants  }) {
         className: `grid grid-flow-row ${(next_font_google_target_css_path_src_pages_index_tsx_import_Inter_arguments_subsets_latin_variableName_inter___WEBPACK_IMPORTED_MODULE_3___default().className)}`,
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: "p-12 pt-24",
+                className: "p-2 pt-20",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                         className: "relative m-6 lg:m-24 md:hidden",
@@ -283,12 +283,12 @@ function Home({ restaurants  }) {
                                         className: "flex md:flex-row flex-col items-center md:items-start gap-4 md:gap-6 my-8",
                                         children: [
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                                href: "#",
+                                                href: "#services",
                                                 className: "p-4 px-8 m-2 max-w-max lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
                                                 children: "サービス詳細"
                                             }),
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                                href: "#",
+                                                href: "#price",
                                                 className: "p-4 px-8 m-2 max-w-max lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
                                                 children: "お見積診断"
                                             })
@@ -518,13 +518,14 @@ function Home({ restaurants  }) {
                 ]
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
+                id: "services",
                 className: "bg-white border-b py-8",
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                     className: "container max-w-5xl mx-auto m-8",
                     children: [
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
                             className: "w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800",
-                            children: "Title"
+                            children: "サービス"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                             className: "w-full mb-4",
@@ -540,20 +541,14 @@ function Home({ restaurants  }) {
                                     children: [
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
                                             className: "text-3xl text-gray-800 font-bold leading-none mb-3",
-                                            children: "Lorem ipsum dolor sit amet"
+                                            children: "ホームページ作成"
                                         }),
                                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                                             className: "text-gray-600 mb-8",
                                             children: [
-                                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.",
+                                                "おむ",
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                                "Images from:",
-                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                                                    className: "text-pink-500 underline",
-                                                    href: "https://undraw.co/",
-                                                    children: "undraw.co"
-                                                })
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {})
                                             ]
                                         })
                                     ]
@@ -1158,7 +1153,7 @@ function Home({ restaurants  }) {
                                         className: "flex items-center justify-center",
                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
                                             className: "mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
-                                            children: "Action"
+                                            children: "お問い合わせ"
                                         })
                                     })
                                 })
@@ -1204,13 +1199,18 @@ function Home({ restaurants  }) {
                 })
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
+                id: "price",
                 className: "bg-gray-100 py-8",
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                     className: "container mx-auto px-2 pt-4 pb-12 text-gray-800",
                     children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h2", {
                             className: "w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800",
-                            children: "Pricing"
+                            children: [
+                                "価格",
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                "（デモ版無料）"
+                            ]
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                             className: "w-full mb-4",
@@ -1461,6 +1461,16 @@ function Home({ restaurants  }) {
                         children: "Action!"
                     })
                 ]
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                children: "--------------------------"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                children: "CD成功した？ローカルでbuildしてプッシュしただけだけどの変更から反映までできてるかな"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                children: "--------------------------"
             })
         ]
     });
