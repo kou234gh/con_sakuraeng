@@ -226,7 +226,7 @@ const Footer = ()=>{
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (/* binding */ Header)
+/* harmony export */   "h": () => (/* binding */ Header)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
@@ -277,16 +277,95 @@ function useMenuAnimation(isOpen) {
     ]);
     return scope;
 }
-// export const Header = () => {
-function Header() {
+const Path = (props)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.path, {
+        fill: "transparent",
+        strokeWidth: "3",
+        stroke: "hsl(0, 0%, 18%)",
+        strokeLinecap: "round",
+        ...props
+    });
+const sidebar = {
+    open: (height = 1000)=>({
+            clipPath: `circle(${height * 2 + 200}px at calc( 100% - 30px ) 40px)`,
+            transition: {
+                type: "spring",
+                stiffness: 20,
+                restDelta: 2
+            }
+        }),
+    closed: {
+        // clipPath: "circle(30px at 40px 40px)",
+        clipPath: "circle(23px at calc( 100% - 28px ) 32px)",
+        transition: {
+            delay: 0.2,
+            type: "spring",
+            stiffness: 400,
+            damping: 40
+        }
+    }
+};
+const variants = {
+    open: {
+        transition: {
+            staggerChildren: 0.07,
+            delayChildren: 0.2
+        }
+    },
+    closed: {
+        transition: {
+            staggerChildren: 0.05,
+            staggerDirection: -1
+        }
+    }
+};
+const variants2 = {
+    open: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            y: {
+                stiffness: 1000,
+                velocity: -100
+            }
+        }
+    },
+    closed: {
+        y: 50,
+        opacity: 0,
+        transition: {
+            y: {
+                stiffness: 1000
+            }
+        }
+    }
+};
+const colors = [
+    "#FF008C",
+    "#D309E1",
+    "#9C1AFF",
+    "#7700FF",
+    "#4400FF"
+];
+const Header = ()=>{
     const [isOpen, setIsOpen] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
     const scope = useMenuAnimation(isOpen);
+    const [isToggleOpen, toggleOpen] = (0,framer_motion__WEBPACK_IMPORTED_MODULE_4__.useCycle)(false, true);
+    const containerRef = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
+    // const { height } = useDimensions(containerRef);
+    const itemIds = [
+        0,
+        1,
+        2,
+        3,
+        4
+    ];
+    const style = {};
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "fixed grid grid-flow-col justify-between overflow-visible opacity-80 border-gray-200 p-5 mx-auto w-full dark:bg-black bg-white h-14 z-50",
+        className: "fixed grid grid-flow-col items-start justify-between overflow-visible opacity-80 border-gray-200 p-5 mx-auto w-full dark:bg-black bg-white h-14 z-50",
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                 href: "/",
-                className: "h-auto grid grid-flow-col gap-2",
+                className: "h-auto grid grid-flow-col gap-2 items-center",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
                         src: _public_sakuraeng_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z,
@@ -294,42 +373,86 @@ function Header() {
                         className: "h-10 w-10"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                        className: "text-lg font-semibold whitespace-nowrap",
+                        className: "hidden md:block text-lg font-semibold whitespace-nowrap",
                         children: "桜エンジニアリング"
                     })
                 ]
             }),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
-                "data-collapse-toggle": "mobile-menu",
-                type: "button",
-                className: "md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center",
-                "aria-controls": "mobile-menu-2",
-                "aria-expanded": "false",
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.nav, {
+                initial: false,
+                className: "md:hidden fixed top-0 right-0 bottom-0 bg-transparent opacity-100 w-[70vw] h-screen",
+                animate: isToggleOpen ? "open" : "closed",
+                // custom={height}
+                ref: containerRef,
                 children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                        className: "sr-only",
-                        children: "Open main menu"
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.div, {
+                        className: "background fixed top-0 right-0 bottom-0 w-[70vw] bg-red-600 opacity-100",
+                        variants: sidebar
                     }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
-                        className: "w-6 h-6",
-                        fill: "currentColor",
-                        viewBox: "0 0 20 20",
-                        xmlns: "http://www.w3.org/2000/svg",
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
-                            fillRule: "evenodd",
-                            d: "M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z",
-                            clipRule: "evenodd"
-                        })
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.ul, {
+                        variants: variants,
+                        className: "fixed top-20",
+                        children: itemIds.map((i)=>// <MenuItem i={i} key={i} />
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.li, {
+                                className: "list-none mb-2 flex items-center cursor-pointer",
+                                variants: variants2,
+                                whileHover: {
+                                    scale: 1.1
+                                },
+                                whileTap: {
+                                    scale: 0.95
+                                },
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                    className: "text-placeholder rounded w-80 h-8 flex-[1]",
+                                    style: {
+                                        border: `2px solid ${colors[i]}`
+                                    }
+                                })
+                            }, i))
                     }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("svg", {
-                        className: "hidden w-6 h-6",
-                        fill: "currentColor",
-                        viewBox: "0 0 20 20",
-                        xmlns: "http://www.w3.org/2000/svg",
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
-                            fillRule: "evenodd",
-                            d: "M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z",
-                            clipRule: "evenodd"
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                        onClick: ()=>toggleOpen(),
+                        className: "fixed top-5 right-4 ",
+                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
+                            width: "23",
+                            height: "23",
+                            viewBox: "0 0 21 19",
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Path, {
+                                    variants: {
+                                        closed: {
+                                            d: "M 2 2.5 L 20 2.5"
+                                        },
+                                        open: {
+                                            d: "M 3 16.5 L 17 2.5"
+                                        }
+                                    }
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Path, {
+                                    d: "M 2 9.423 L 20 9.423",
+                                    variants: {
+                                        closed: {
+                                            opacity: 1
+                                        },
+                                        open: {
+                                            opacity: 0
+                                        }
+                                    },
+                                    transition: {
+                                        duration: 0.1
+                                    }
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Path, {
+                                    variants: {
+                                        closed: {
+                                            d: "M 2 16.346 L 20 16.346"
+                                        },
+                                        open: {
+                                            d: "M 3 2.5 L 17 16.346"
+                                        }
+                                    }
+                                })
+                            ]
                         })
                     })
                 ]
@@ -393,7 +516,7 @@ function Header() {
             })
         ]
     });
-}
+};
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
@@ -424,7 +547,7 @@ _components_Header__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies_
 function App({ Component , pageProps  }) {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Header__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Header__WEBPACK_IMPORTED_MODULE_2__/* .Header */ .h, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
                 ...pageProps
             }),
