@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       about
-    </div>
+    </main>
   )
 }
 

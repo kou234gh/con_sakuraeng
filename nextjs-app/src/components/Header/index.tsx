@@ -156,7 +156,7 @@ export const Header = () => {
               whileTap={{ scale: 0.97 }}
               onClick={() => setIsOpen( !isOpen )}
             >
-              <Link href="#services" className="block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-400 text-gray-800">
+              <Link href="/#services" className="block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-400 text-gray-800">
                 サービス
               </Link>
             </motion.button>
@@ -174,30 +174,16 @@ export const Header = () => {
               <li>
                 <Link href="services/kourituka" className="block p-3 text-gray-800 hover:bg-gray-100  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300">業務効率化</Link>
               </li>
-              {/* <li>Item 3 </li>
-            <li>Item 4 </li>
-            <li>Item 5 </li> */}
             </ul>{" "}
           </li>
 
           <li>
-            <Link href="#" className="text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white">お問い合わせ</Link>
+            <Link href="/blog" className="text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white">ブログ</Link>
           </li>
-          {/* {itemIds.map( i => (
-            // <MenuItem i={i} key={i} />
-            <motion.li
-              key={i}
-              className="list-none mb-2 flex items-center cursor-pointer"
-              variants={variants2}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-               <div className="icon-placeholder w-10 h-10 rounded-full m-8 flex-[40px 0]" 
-              style={style} 
-              /> 
-              <div className="text-placeholder rounded w-80 h-8 flex-[1]" style={{ border: `2px solid ${ colors[ i ] }` }} />
-            </motion.li>
-          ) )} */}
+          <li>
+            <Link href="/contact" className="text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white">お問い合わせ</Link>
+          </li>
+          
         </motion.ul>
 
         <button
@@ -263,7 +249,10 @@ export const Header = () => {
         </li>
 
         <li>
-          <Link href="#contact" className="text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white">お問い合わせ</Link>
+          <Link href="/blog" className="text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white">ブログ</Link>
+        </li>
+        <li>
+          <Link href="/contact" className="text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white">お問い合わせ</Link>
         </li>
       </ul>
 

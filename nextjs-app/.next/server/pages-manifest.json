@@ -1,9 +1,13 @@
 {
-  "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
-  "/aboutus": "pages/aboutus.html",
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/aboutus": "pages/aboutus.html",
   "/api/hello": "pages/api/hello.js",
-  "/": "pages/index.js",
+  "/api/send_mail": "pages/api/send_mail.js",
+  "/blog/[id]": "pages/blog/[id].js",
+  "/blog": "pages/blog.js",
+  "/contact": "pages/contact.html",
+  "/": "pages/index.html",
   "/404": "pages/404.html"
 }

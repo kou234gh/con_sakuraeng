@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer'
 
 export default function App ( { Component, pageProps }: AppProps ) {
   return (
+    // 以下はid="__next"のディブタグにまとめられる
     <>
       <Header />
       <Component {...pageProps} />
