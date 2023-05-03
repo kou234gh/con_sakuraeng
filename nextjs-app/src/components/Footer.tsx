@@ -60,7 +60,7 @@ export const Footer = () => {
             <p className="uppercase text-gray-500 md:mb-6">Company</p>
             <ul className="list-reset mb-6">
               <li className="hidden mt-2  mr-2 md:block md:mr-0">
-                <Link href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</Link>
+                <Link href="/blog" className="no-underline hover:underline text-gray-800 hover:text-pink-500">ブログ</Link>
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
                 <Link href="#" className="no-underline hover:underline text-gray-800 hover:text-pink-500">私たちについて</Link>

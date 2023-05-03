@@ -18,11 +18,17 @@ const Blog = ( { teches }: any ) => {
         <ul className="grid grid-rows-4 grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2">
           {teches.data.map( ( tech: any ) => (
             <Link
-            href={`/blog/${tech.id}`} 
-            className="rounded-2xl bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 p-4 flex flex-col relative undefined" 
-            key={tech.id}
+              href={{
+                pathname: `/blog/${ tech.id }`,
+                query: {
+                  tag: "teches",
+                  id: tech.id,
+                }
+              }}
+              className="rounded-2xl bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 p-4 flex flex-col relative undefined"
+              key={tech.id}
             >
-              <li className="border-solid border dark:border-gray-200 border-gray-800 p-2" >
+              <li className="border-solid border dark:border-gray-200 border-gray-800 p-4" >
                 <h2>{tech.attributes.Name}</h2>
                 <p className="overflow-hidden">{tech.attributes.Description}</p>
               </li>

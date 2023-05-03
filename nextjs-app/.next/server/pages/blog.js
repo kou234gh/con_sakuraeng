@@ -38,10 +38,16 @@ const Blog = ({ teches  })=>{
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
                     className: "grid grid-rows-4 grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2",
                     children: teches.data.map((tech)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                            href: `/blog/${tech.id}`,
+                            href: {
+                                pathname: `/blog/${tech.id}`,
+                                query: {
+                                    tag: "teches",
+                                    id: tech.id
+                                }
+                            },
                             className: "rounded-2xl bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 p-4 flex flex-col relative undefined",
                             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
-                                className: "border-solid border dark:border-gray-200 border-gray-800 p-2",
+                                className: "border-solid border dark:border-gray-200 border-gray-800 p-4",
                                 children: [
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
                                         children: tech.attributes.Name

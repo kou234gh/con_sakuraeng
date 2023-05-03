@@ -219,7 +219,7 @@ export const Header = () => {
       {/* デスクトップ画面用 */}
       <ul className="hidden md:grid grid-flow-row md:grid-flow-col pt-4 gap-2 md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
         <li>
-          <Link href="#services" className="text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white">私たちについて</Link>
+          <Link href="/aboutus" className="text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white">無料お見積もり</Link>
         </li>
 
         <li className="grid gap-3" ref={scope}>

@@ -24,38 +24,37 @@ axios__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (awa
 
 
 
-const Blog = ({ teches  })=>{
+const Blog = ({ data  })=>{
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();
-    const { id  } = router.query;
-    const tech = teches.data[1];
-    console.log(tech);
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
-        children: [
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: "border-solid border dark:border-gray-200 border-gray-800 p-2",
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                        children: tech.attributes.Name
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                        className: "overflow-hidden",
-                        children: tech.attributes.Description
-                    })
-                ]
-            }),
-            id
-        ]
+    // console.log( router )
+    const { id , tag  } = router.query;
+    // console.log( `${ id } + ${ tag }` )
+    console.log(typeof data.data[0].id);
+    const tech = data.data.find((obj)=>obj.id == id);
+    console.log("---tech------------------------");
+    console.info(tech);
+    console.log("---tech------------------------");
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("main", {
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            className: "border-solid border dark:border-gray-200 border-gray-800 p-2",
+            children: [
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                    children: tech.attributes.Name
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                    className: "overflow-hidden",
+                    children: tech.attributes.Description
+                })
+            ]
+        })
     });
 };
 Blog.getInitialProps = async (ctx)=>{
     try {
         const res = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(`http://127.0.0.1:1337/api/teches`);
-        const teches = res.data;
-        // console.log("getinitialprops---------------------")
-        // console.log( teches.data )
-        // console.log("------------------------")
+        const data = res.data;
         return {
-            teches
+            data
         };
     } catch (error) {
         return {

@@ -35,8 +35,12 @@ body {
 }
 
 main {
-  padding: 8rem 1rem 5rem 1rem;
+  padding: 15vw 5vw 10vw 5vw;
   min-height: 100vh;
+}
+
+section{
+  padding: 15vw 5vw 10vw 5vw;
 }
 
 code {
@@ -88,6 +92,7 @@ p{
   margin-top: 1rem;
   margin-bottom: 2rem;
   display: inline-block;
+  white-space: pre-line;
   /* flex-direction: column; */
   /* align-items: flex-start; */
 }
