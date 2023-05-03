@@ -1,4 +1,4 @@
-import { Constact } from "@/components/contact"
+import { Constact } from "@/components/pages/contact"
 
 const Contact1 = () => {
   return (

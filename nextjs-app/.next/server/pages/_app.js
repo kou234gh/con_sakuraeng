@@ -15,205 +15,573 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 6127:
+/***/ 787:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "$": () => (/* binding */ Footer)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5675);
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1664);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_sakuraeng_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9663);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "$": () => (/* binding */ Footer)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: ./node_modules/next/image.js
+var next_image = __webpack_require__(5675);
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(1664);
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+// EXTERNAL MODULE: ./public/sakuraeng.png
+var sakuraeng = __webpack_require__(9663);
+;// CONCATENATED MODULE: ./src/components/faq/index.tsx
+
+const Faq_homepage = ()=>{
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "mb-10",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h3", {
+                        className: "flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                className: "flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400",
+                                fill: "currentColor",
+                                viewBox: "0 0 20 20",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                    "fill-rule": "evenodd",
+                                    d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
+                                    "clip-rule": "evenodd"
+                                })
+                            }),
+                            "無料ホームページ作成サイトでホームページを作るのはどんな注意点がありますか？"
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "無料ホームページ作成ツールは初めてホームページを作成する方にとって手軽な選択肢ですが、注意が必要です。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "まず、機能の制限がある場合があります。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "無料版では追加機能や独自ドメインを使えない場合があり、商用利用には向いていないこともあります。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "また、無料ツールはセキュリティの問題があることもあります。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "さらに、無料版から有料版へのアップグレードが必要な場合や、機能追加の際に無料だと制限がかかるなど"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "長期的に潜在的なコストがかかることもあります。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "一方、カスタムでホームページを作成することには知識が要するものの複数のメリットがあります。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "まず、自分たちのブランドイメージに合ったデザインを自由に選ぶことができます。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "また、機能やページ数も自由にカスタマイズできます。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "さらに、独自ドメインを使用することで、ブランド認知度を高めることができます。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "そして、セキュリティも自分たちで管理することができます。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "すべての要素を自分たちでコントロールできるため、"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "自分たちのビジネスに最適なホームページを作成することができます。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "カスタムで作成する上で注意することは、"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "長期的なコストを抑えた上で"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
+                            /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                children: "運用者が使いやすい環境を構築することだと考えております。"
+                            }),
+                            /*#__PURE__*/ jsx_runtime_.jsx("br", {})
+                        ]
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "mb-10",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h3", {
+                        className: "flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                className: "flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400",
+                                fill: "currentColor",
+                                viewBox: "0 0 20 20",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                    "fill-rule": "evenodd",
+                                    d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
+                                    "clip-rule": "evenodd"
+                                })
+                            }),
+                            "What does the free version include?"
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: [
+                            "The ",
+                            /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                href: "#",
+                                className: "font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline",
+                                children: "free version"
+                            }),
+                            " of Windster includes a minimal style guidelines, component variants, and a dashboard page with the mobile version alongside it."
+                        ]
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "You can use this version for any purposes, because it is open-source under the MIT license."
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "mb-10",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h3", {
+                        className: "flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                className: "flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400",
+                                fill: "currentColor",
+                                viewBox: "0 0 20 20",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                    "fill-rule": "evenodd",
+                                    d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
+                                    "clip-rule": "evenodd"
+                                })
+                            }),
+                            "What is the difference between Windster and Tailwind UI?"
+                        ]
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "Although both Windster and Tailwind UI are built for integration with Tailwind CSS, the main difference is in the design, the pages, the extra components and UI elements that Windster includes."
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "Additionally, Windster is a project that is still in development, and later it will include both the application, marketing, and e-commerce UI interfaces."
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "mb-10",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h3", {
+                        className: "flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                className: "flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400",
+                                fill: "currentColor",
+                                viewBox: "0 0 20 20",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                    "fill-rule": "evenodd",
+                                    d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
+                                    "clip-rule": "evenodd"
+                                })
+                            }),
+                            "Can I use Windster in open-source projects?"
+                        ]
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "Generally, it is accepted to use Windster in open-source projects, as long as it is not a UI library, a theme, a template, a page-builder that would be considered as an alternative to Windster itself."
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "With that being said, feel free to use this design kit for your open-source projects."
+                    }),
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: [
+                            "Find out more information by ",
+                            /*#__PURE__*/ jsx_runtime_.jsx("a", {
+                                href: "#",
+                                className: "font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline",
+                                children: "reading the license"
+                            }),
+                            "."
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+};
+const Faq_adsns = ()=>{
+    return /*#__PURE__*/ _jsx(_Fragment, {});
+};
+const Faq_dataanalytics = ()=>{
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        children: [
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "mb-10",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h3", {
+                        className: "flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                className: "flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400",
+                                fill: "currentColor",
+                                viewBox: "0 0 20 20",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                    "fill-rule": "evenodd",
+                                    d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
+                                    "clip-rule": "evenodd"
+                                })
+                            }),
+                            "ウェブサイトやSNSのデータ分析にはどんなメリットがありますか？またその結果の効果的な使い方はなんですか？"
+                        ]
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "１：ユーザーの行動分析が可能になる：ウェブサイトやSNSのアクセス数や滞在時間、閲覧ページ、クリック数などのデータを収集・分析することで、ユーザーの行動や嗜好を分析することができます。これにより、どのようなコンテンツが人気なのか、どのような商品が売れているのかなど、貴重な情報を得ることができます。"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "２：ターゲットユーザーの把握が容易になる：データ分析によって、自社のウェブサイトやSNSを訪れるユーザーの属性や行動パターン、嗜好などを分析することができます。これにより、ターゲットユーザーを明確に把握することができます。"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "３：マーケティング施策の改善に役立つ：データ分析の結果を元に、自社のマーケティング施策を改善することができます。例えば、どのようなコンテンツが人気があるのか、どのようなキャンペーンが効果的であるのかなどを把握し、より効果的な施策を展開することができます。"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "mb-10",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h3", {
+                        className: "flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                className: "flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400",
+                                fill: "currentColor",
+                                viewBox: "0 0 20 20",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                    "fill-rule": "evenodd",
+                                    d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
+                                    "clip-rule": "evenodd"
+                                })
+                            }),
+                            "Google Analytics4を使うメリットは何ですか？"
+                        ]
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "Google Analytics4は、データをより詳細かつ網羅的に分析できるようになっており、さまざまなデータソースを統合して分析することができます。また、AIによる自動分析機能や、カスタムデータ分析、予測モデルの作成など、より高度な分析が可能です。"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "mb-10",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h3", {
+                        className: "flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                className: "flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400",
+                                fill: "currentColor",
+                                viewBox: "0 0 20 20",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                    "fill-rule": "evenodd",
+                                    d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
+                                    "clip-rule": "evenodd"
+                                })
+                            }),
+                            "インスタグラムの分析はどうやって行えますか？"
+                        ]
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "Google Analytics4では、インスタグラムの分析が可能です。まず、インスタグラムの公式APIを使って、インスタグラムアカウントのアクセストークンを取得します。その後、Google Analytics4の管理画面で、取得したアクセストークンを使ってインスタグラムアカウントを連携させます。これにより、インスタグラムのフォロワー数や投稿数、エンゲージメント率などのデータを分析することができます。"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                className: "mb-10",
+                children: [
+                    /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h3", {
+                        className: "flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white",
+                        children: [
+                            /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                className: "flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400",
+                                fill: "currentColor",
+                                viewBox: "0 0 20 20",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                    "fill-rule": "evenodd",
+                                    d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
+                                    "clip-rule": "evenodd"
+                                })
+                            }),
+                            "Google Analytics4で取得できるデータは何ですか？"
+                        ]
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        className: "text-gray-500 dark:text-gray-400",
+                        children: "Google Analytics4で取得できるデータは、ウェブサイトやSNSのアクセス数、セッション数、ページビュー数、ユーザー属性、コンバージョン率、各種イベントの発生数、ページの流入元など、様々なデータがあります。また、Google Analytics4では、AIによる自動分析機能もあり、自動的にトレンドや予測を表示することができます。"
+                    })
+                ]
+            })
+        ]
+    });
+};
+const Faq = ()=>{
+    {}
+    return /*#__PURE__*/ jsx_runtime_.jsx("section", {
+        className: "bg-white dark:bg-gray-900",
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            className: "py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6",
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx("h2", {
+                    className: "mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white",
+                    children: "Frequently asked questions"
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx(Faq_dataanalytics, {}),
+                        /*#__PURE__*/ jsx_runtime_.jsx(Faq_homepage, {})
+                    ]
+                })
+            ]
+        })
+    });
+};
+
+;// CONCATENATED MODULE: ./src/components/Footer.tsx
+
 
 
 
 
 const Footer = ()=>{
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("footer", {
-        className: "bg-white",
-        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-            className: "p-[10vw]",
-            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: "w-full flex flex-col md:flex-row py-6 items-start",
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "flex flex-1 items-start mb-6 text-black",
-                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                            href: "/",
-                            className: "flex h-20 items-end",
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("footer", {
+        className: "",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(Faq, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "p-[10vw] bg-white",
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "w-full flex flex-col md:flex-row py-6 items-start",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: "flex flex-1 items-start mb-6 text-black",
+                            children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)((link_default()), {
+                                href: "/",
+                                className: "flex h-20 items-end",
+                                children: [
+                                    /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
+                                        src: sakuraeng/* default */.Z,
+                                        alt: "sakura eng logo",
+                                        className: "h-10 w-10"
+                                    }),
+                                    /*#__PURE__*/ jsx_runtime_.jsx("span", {
+                                        className: "text-lg font-semibold whitespace-nowrap",
+                                        children: "桜エンジニアリング"
+                                    })
+                                ]
+                            })
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "hidden flex-1",
                             children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
-                                    src: _public_sakuraeng_png__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z,
-                                    alt: "sakura eng logo",
-                                    className: "h-10 w-10"
+                                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                    className: "uppercase text-gray-500 md:mb-6",
+                                    children: "Links"
                                 }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                    className: "text-lg font-semibold whitespace-nowrap",
-                                    children: "桜エンジニアリング"
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("ul", {
+                                    className: "list-reset mb-6",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "FAQ"
+                                            })
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "Help"
+                                            })
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "Support"
+                                            })
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "hidden flex-1",
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                    className: "uppercase text-gray-500 md:mb-6",
+                                    children: "Legal"
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("ul", {
+                                    className: "list-reset mb-6",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "Terms"
+                                            })
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "Privacy"
+                                            })
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "flex-1",
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                    className: "uppercase text-gray-500 md:mb-6",
+                                    children: "Social"
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("ul", {
+                                    className: "list-reset mb-6",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "Facebook"
+                                            })
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "Linkedin"
+                                            })
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "Twitter"
+                                            })
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "flex-1",
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                    className: "uppercase text-gray-500 md:mb-6",
+                                    children: "Company"
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("ul", {
+                                    className: "list-reset mb-6",
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "hidden mt-2  mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "/blog",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "ブログ"
+                                            })
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "私たちについて"
+                                            })
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "お問い合わせ"
+                                            })
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("li", {
+                                            className: "mt-2 inline-block mr-2 md:block md:mr-0",
+                                            children: /*#__PURE__*/ jsx_runtime_.jsx((link_default()), {
+                                                href: "#",
+                                                className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
+                                                children: "お見積診断"
+                                            })
+                                        })
+                                    ]
                                 })
                             ]
                         })
-                    }),
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "hidden flex-1",
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                className: "uppercase text-gray-500 md:mb-6",
-                                children: "Links"
-                            }),
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                                className: "list-reset mb-6",
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "FAQ"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "Help"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "Support"
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "hidden flex-1",
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                className: "uppercase text-gray-500 md:mb-6",
-                                children: "Legal"
-                            }),
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                                className: "list-reset mb-6",
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "Terms"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "Privacy"
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "flex-1",
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                className: "uppercase text-gray-500 md:mb-6",
-                                children: "Social"
-                            }),
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                                className: "list-reset mb-6",
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "Facebook"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "Linkedin"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "Twitter"
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "flex-1",
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                className: "uppercase text-gray-500 md:mb-6",
-                                children: "Company"
-                            }),
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                                className: "list-reset mb-6",
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "hidden mt-2  mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "/blog",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "ブログ"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "私たちについて"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "お問い合わせ"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        className: "mt-2 inline-block mr-2 md:block md:mr-0",
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#",
-                                            className: "no-underline hover:underline text-gray-800 hover:text-pink-500",
-                                            children: "お見積診断"
-                                        })
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                ]
+                    ]
+                })
             })
-        })
+        ]
     });
 };
 
@@ -587,7 +955,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(108);
 /* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Header_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7184);
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6127);
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(787);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Header_index__WEBPACK_IMPORTED_MODULE_2__]);
 _components_Header_index__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 

@@ -1,10 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import sakuraeng_png from "../../public/sakuraeng.png"
+import { Faq } from "./faq"
 export const Footer = () => {
   return (
-    <footer className="bg-white">
-      <div className="p-[10vw]">
+    <footer className="">
+
+      <Faq />
+      <div className="p-[10vw] bg-white">
         <div className="w-full flex flex-col md:flex-row py-6 items-start">
           <div className="flex flex-1 items-start mb-6 text-black">
             <Link href="/" className="flex h-20 items-end">
