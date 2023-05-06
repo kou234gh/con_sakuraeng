@@ -331,7 +331,7 @@ const Faq_dataanalytics = ()=>{
                                     "clip-rule": "evenodd"
                                 })
                             }),
-                            "インスタグラムの分析はどうやって行えますか？"
+                            "インスタグラムの分析はどのように行えますか？"
                         ]
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("p", {
@@ -357,7 +357,7 @@ const Faq_dataanalytics = ()=>{
                                     "clip-rule": "evenodd"
                                 })
                             }),
-                            "Google Analytics4で取得できるデータは何ですか？"
+                            "Google Analytics4ではどのようなデータを取得することができますか？"
                         ]
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("p", {
@@ -956,8 +956,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Header_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7184);
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(787);
+/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4298);
+/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_script__WEBPACK_IMPORTED_MODULE_4__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Header_index__WEBPACK_IMPORTED_MODULE_2__]);
 _components_Header_index__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -966,6 +969,20 @@ function App({ Component , pageProps  }) {
     return(// 以下はid="__next"のディブタグにまとめられる
     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_4___default()), {
+                src: "https://www.googletagmanager.com/gtag/js?id=G-21V9JN6CTS"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_4___default()), {
+                id: "google-analytics",
+                strategy: "afterInteractive",
+                children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', ${process.env.GA4_MEASUREMENT_ID});
+        `
+            }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Header_index__WEBPACK_IMPORTED_MODULE_2__/* .Header */ .h, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
                 ...pageProps
@@ -1139,6 +1156,14 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ 6405:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-dom");
+
+/***/ }),
+
 /***/ 997:
 /***/ ((module) => {
 
@@ -1162,7 +1187,7 @@ module.exports = import("framer-motion");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [664,636,675], () => (__webpack_exec__(9212)));
+var __webpack_exports__ = __webpack_require__.X(0, [664,636,890], () => (__webpack_exec__(9212)));
 module.exports = __webpack_exports__;
 
 })();

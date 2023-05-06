@@ -81,14 +81,14 @@ export const Faq_dataanalytics = () => {
       <div className="mb-10">
         <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
           <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-          インスタグラムの分析はどうやって行えますか？
+          インスタグラムの分析はどのように行えますか？
         </h3>
         <p className="text-gray-500 dark:text-gray-400">Google Analytics4では、インスタグラムの分析が可能です。まず、インスタグラムの公式APIを使って、インスタグラムアカウントのアクセストークンを取得します。その後、Google Analytics4の管理画面で、取得したアクセストークンを使ってインスタグラムアカウントを連携させます。これにより、インスタグラムのフォロワー数や投稿数、エンゲージメント率などのデータを分析することができます。</p>
       </div>
       <div className="mb-10">
         <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
           <svg className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
-          Google Analytics4で取得できるデータは何ですか？
+          Google Analytics4ではどのようなデータを取得することができますか？
         </h3>
         <p className="text-gray-500 dark:text-gray-400">Google Analytics4で取得できるデータは、ウェブサイトやSNSのアクセス数、セッション数、ページビュー数、ユーザー属性、コンバージョン率、各種イベントの発生数、ページの流入元など、様々なデータがあります。また、Google Analytics4では、AIによる自動分析機能もあり、自動的にトレンドや予測を表示することができます。</p>
         {/* <p className="text-gray-500 dark:text-gray-400">Feel free to <a href="#" className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline" target="_blank" rel="noreferrer">contact us</a> and we'll help you out as soon as we can.</p> */}
