@@ -1,10 +1,9 @@
-import { Homepage_c } from "@/components/pages/services"
+import { Homepage_c } from "@/components/pages_c/services"
 
 const Homepage = () => {
   return (
     <main>
       <Homepage_c />
-      
     </main>
   )
 }

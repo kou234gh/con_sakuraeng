@@ -1,10 +1,7 @@
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import axios from 'axios'
 import Link from 'next/link'
-import { Constact } from '@/components/pages/contact'
-import Estimate from '@/components/pages/services/Estimate'
-import { Services_c } from '@/components/pages/services'
+import Estimate from '@/components/pages_c/services/Estimate'
+import { Services_c } from '@/components/pages_c/services'
 
 const inter = Inter( { subsets: [ 'latin' ] } )
 
@@ -166,10 +163,7 @@ export default function Home ( { restaurants }: any ) {
         </g>
       </svg>
 
-      {/* ？contact */}
-      <section className="flex justify-center mb-12">
-        <Constact />
-      </section>
+
     </div>
   )
 }

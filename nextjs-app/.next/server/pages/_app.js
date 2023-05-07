@@ -15,7 +15,300 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 787:
+/***/ 7806:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "h": () => (/* binding */ Header)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5675);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6197);
+/* harmony import */ var _public_sakuraeng_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9663);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_3__]);
+framer_motion__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+
+
+// import { useDimensions } from "./useDimention";
+
+// const staggerMenuItems = stagger( 0.1, { startDelay: 0.15 } );
+// 
+// function useMenuAnimation ( isOpen: boolean ) {
+//   const [ scope, animate ] = useAnimate();
+// 
+//   useEffect( () => {
+//     // animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
+// 
+//     animate(
+//       "ul",
+//       {
+//         clipPath: isOpen
+//           ? "inset(0% 0% 0% 0% round 10px)"
+//           : "inset(10% 50% 90% 50% round 10px)"
+//       },
+//       {
+//         type: "spring",
+//         bounce: 0,
+//         duration: 0.5
+//       }
+//     );
+// 
+//     animate(
+//       "li",
+//       isOpen
+//         ? { opacity: 1, scale: 1, filter: "blur(0px)" }
+//         : { opacity: 0, scale: 0.3, filter: "blur(20px)" },
+//       {
+//         duration: 0.2,
+//         delay: isOpen ? staggerMenuItems : 0
+//       }
+//     );
+//   }, [ isOpen ] );
+// 
+//   return scope;
+// }
+const Path = (props)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.path, {
+        // fill="#fff"
+        strokeWidth: "3",
+        // stroke="rgb(255 255 255)"
+        className: "dark:fill-white dark:stroke-gray-100",
+        strokeLinecap: "round",
+        ...props
+    });
+const sidebar = {
+    open: (height = 1000)=>({
+            clipPath: `circle(${height * 2 + 200}px at calc( 100% - 30px ) 40px)`,
+            height: "100vh",
+            transition: {
+                type: "spring",
+                stiffness: 20,
+                restDelta: 2
+            }
+        }),
+    closed: {
+        // clipPath: "circle(30px at 40px 40px)",
+        clipPath: "circle(23px at calc( 100% - 28px ) 32px)",
+        height: "0vh",
+        transition: {
+            delay: 0.1,
+            type: "spring",
+            stiffness: 400,
+            damping: 40
+        }
+    }
+};
+const variants = {
+    open: {
+        transition: {
+            staggerChildren: 0.07,
+            delayChildren: 0.2
+        }
+    },
+    closed: {
+        transition: {
+            staggerChildren: 0.05,
+            staggerDirection: -1
+        }
+    }
+};
+const variants2 = {
+    open: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            delay: 0.1,
+            y: {
+                stiffness: 1000,
+                velocity: -100
+            }
+        }
+    },
+    closed: {
+        y: 50,
+        opacity: 0,
+        transition: {
+            y: {
+                stiffness: 1000
+            }
+        }
+    }
+};
+const colors = (/* unused pure expression or super */ null && ([
+    "#FF008C",
+    "#D309E1",
+    "#9C1AFF",
+    "#7700FF",
+    "#4400FF"
+]));
+const Header = ()=>{
+    // 
+    //   const [ isOpen, setIsOpen ] = useState( false );
+    //   const scope = useMenuAnimation( isOpen );
+    // 
+    const [isToggleOpen, toggleOpen] = (0,framer_motion__WEBPACK_IMPORTED_MODULE_3__.useCycle)(false, true);
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        className: "fixed flex flex-row items-start justify-between overflow-visible opacity-80 border-gray-200 px-[8vw] mx-auto w-full dark:bg-black bg-white h-14 z-40",
+        children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                href: "/",
+                className: "h-auto pt-2 grid grid-flow-col gap-2 items-center",
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
+                        src: _public_sakuraeng_png__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z,
+                        alt: "sakura eng logo",
+                        className: "h-10 w-10"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                        className: "hidden md:block text-black text-lg font-semibold whitespace-nowrap dark:text-white",
+                        children: "桜エンジニアリング"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.nav, {
+                initial: false,
+                className: "md:hidden fixed top-0 right-0 bottom-0 opacity-100 w-[70vw] h-screen z-50",
+                animate: isToggleOpen ? "open" : "closed",
+                variants: sidebar,
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.div, {
+                        className: "background h-screen w-[70vw] bg-gray-900 text-gray-900 dark:bg-gray-900 dark:text-gray-100 opacity-100",
+                        variants: sidebar,
+                        animate: isToggleOpen ? "open" : "closed"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.ul, {
+                        variants: variants2,
+                        className: "fixed top-20 pl-8",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                    href: "/about",
+                                    className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
+                                    children: "私たちについて"
+                                })
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                className: "grid gap-3",
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                    href: "/services",
+                                    className: "block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-400 text-gray-800",
+                                    children: "サービス"
+                                })
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                    href: "/blog",
+                                    className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
+                                    children: "ブログ"
+                                })
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                    href: "/contact",
+                                    className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
+                                    children: "お問い合わせ"
+                                })
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
+                        onClick: ()=>toggleOpen(),
+                        className: "fixed top-5 right-4 ",
+                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
+                            className: "",
+                            width: "23",
+                            height: "23",
+                            viewBox: "0 0 21 19",
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Path, {
+                                    variants: {
+                                        closed: {
+                                            d: "M 2 2.5 L 20 2.5"
+                                        },
+                                        open: {
+                                            d: "M 3 16.5 L 17 2.5"
+                                        }
+                                    }
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Path, {
+                                    d: "M 2 9.423 L 20 9.423",
+                                    variants: {
+                                        closed: {
+                                            opacity: 1
+                                        },
+                                        open: {
+                                            opacity: 0
+                                        }
+                                    },
+                                    transition: {
+                                        duration: 0.1
+                                    }
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Path, {
+                                    variants: {
+                                        closed: {
+                                            d: "M 2 16.346 L 20 16.346"
+                                        },
+                                        open: {
+                                            d: "M 3 2.5 L 17 16.346"
+                                        }
+                                    }
+                                })
+                            ]
+                        })
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
+                className: "hidden md:grid grid-flow-row md:grid-flow-col pt-4 gap-2 md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium",
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                            href: "/aboutus",
+                            className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
+                            children: "無料お見積もり"
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                        className: "grid gap-3",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                            href: "/services",
+                            children: "サービス"
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                            href: "/blog",
+                            className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
+                            children: "ブログ"
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                            href: "/contact",
+                            className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
+                            children: "お問い合わせ"
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+};
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 7122:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -35,7 +328,7 @@ var next_link = __webpack_require__(1664);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 // EXTERNAL MODULE: ./public/sakuraeng.png
 var sakuraeng = __webpack_require__(9663);
-;// CONCATENATED MODULE: ./src/components/faq/index.tsx
+;// CONCATENATED MODULE: ./src/components/always/footer/faq/index.tsx
 
 const Faq_homepage = ()=>{
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
@@ -52,12 +345,12 @@ const Faq_homepage = ()=>{
                                 viewBox: "0 0 20 20",
                                 xmlns: "http://www.w3.org/2000/svg",
                                 children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                                    "fill-rule": "evenodd",
+                                    fillRule: "evenodd",
                                     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
-                                    "clip-rule": "evenodd"
+                                    clipRule: "evenodd"
                                 })
                             }),
-                            "無料ホームページ作成サイトでホームページを作るのはどんな注意点がありますか？"
+                            "無料ホームページ作成サイトでホームページを作る際にどのような注意点がありますか？"
                         ]
                     }),
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
@@ -147,9 +440,9 @@ const Faq_homepage = ()=>{
                                 viewBox: "0 0 20 20",
                                 xmlns: "http://www.w3.org/2000/svg",
                                 children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                                    "fill-rule": "evenodd",
+                                    fillRule: "evenodd",
                                     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
-                                    "clip-rule": "evenodd"
+                                    clipRule: "evenodd"
                                 })
                             }),
                             "What does the free version include?"
@@ -185,9 +478,9 @@ const Faq_homepage = ()=>{
                                 viewBox: "0 0 20 20",
                                 xmlns: "http://www.w3.org/2000/svg",
                                 children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                                    "fill-rule": "evenodd",
+                                    fillRule: "evenodd",
                                     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
-                                    "clip-rule": "evenodd"
+                                    clipRule: "evenodd"
                                 })
                             }),
                             "What is the difference between Windster and Tailwind UI?"
@@ -215,9 +508,9 @@ const Faq_homepage = ()=>{
                                 viewBox: "0 0 20 20",
                                 xmlns: "http://www.w3.org/2000/svg",
                                 children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                                    "fill-rule": "evenodd",
+                                    fillRule: "evenodd",
                                     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
-                                    "clip-rule": "evenodd"
+                                    clipRule: "evenodd"
                                 })
                             }),
                             "Can I use Windster in open-source projects?"
@@ -266,12 +559,12 @@ const Faq_dataanalytics = ()=>{
                                 viewBox: "0 0 20 20",
                                 xmlns: "http://www.w3.org/2000/svg",
                                 children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                                    "fill-rule": "evenodd",
+                                    fillRule: "evenodd",
                                     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
-                                    "clip-rule": "evenodd"
+                                    clipRule: "evenodd"
                                 })
                             }),
-                            "ウェブサイトやSNSのデータ分析にはどんなメリットがありますか？またその結果の効果的な使い方はなんですか？"
+                            "ウェブサイトやSNSのデータ分析にはどのようなメリットがありますか？またその結果の効果的な使い方はなんですか？"
                         ]
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("p", {
@@ -300,9 +593,9 @@ const Faq_dataanalytics = ()=>{
                                 viewBox: "0 0 20 20",
                                 xmlns: "http://www.w3.org/2000/svg",
                                 children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                                    "fill-rule": "evenodd",
+                                    fillRule: "evenodd",
                                     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
-                                    "clip-rule": "evenodd"
+                                    clipRule: "evenodd"
                                 })
                             }),
                             "Google Analytics4を使うメリットは何ですか？"
@@ -326,9 +619,9 @@ const Faq_dataanalytics = ()=>{
                                 viewBox: "0 0 20 20",
                                 xmlns: "http://www.w3.org/2000/svg",
                                 children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                                    "fill-rule": "evenodd",
+                                    fillRule: "evenodd",
                                     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
-                                    "clip-rule": "evenodd"
+                                    clipRule: "evenodd"
                                 })
                             }),
                             "インスタグラムの分析はどのように行えますか？"
@@ -352,9 +645,9 @@ const Faq_dataanalytics = ()=>{
                                 viewBox: "0 0 20 20",
                                 xmlns: "http://www.w3.org/2000/svg",
                                 children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                                    "fill-rule": "evenodd",
+                                    fillRule: "evenodd",
                                     d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z",
-                                    "clip-rule": "evenodd"
+                                    clipRule: "evenodd"
                                 })
                             }),
                             "Google Analytics4ではどのようなデータを取得することができますか？"
@@ -378,7 +671,7 @@ const Faq = ()=>{
             children: [
                 /*#__PURE__*/ jsx_runtime_.jsx("h2", {
                     className: "mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white",
-                    children: "Frequently asked questions"
+                    children: "よくある質問"
                 }),
                 /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                     className: "grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2",
@@ -392,7 +685,10 @@ const Faq = ()=>{
     });
 };
 
-;// CONCATENATED MODULE: ./src/components/Footer.tsx
+// EXTERNAL MODULE: ./src/components/pages_c/contact/index.tsx
+var contact = __webpack_require__(3143);
+;// CONCATENATED MODULE: ./src/components/always/footer/index.tsx
+
 
 
 
@@ -400,9 +696,14 @@ const Faq = ()=>{
 
 const Footer = ()=>{
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("footer", {
-        className: "",
         children: [
-            /*#__PURE__*/ jsx_runtime_.jsx(Faq, {}),
+            /*#__PURE__*/ jsx_runtime_.jsx("section", {
+                children: /*#__PURE__*/ jsx_runtime_.jsx(Faq, {})
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("section", {
+                className: "flex justify-center mb-12",
+                children: /*#__PURE__*/ jsx_runtime_.jsx(contact/* Constact */.v, {})
+            }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: "p-[10vw] bg-white",
                 children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
@@ -412,7 +713,7 @@ const Footer = ()=>{
                             className: "flex flex-1 items-start mb-6 text-black",
                             children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)((link_default()), {
                                 href: "/",
-                                className: "flex h-20 items-end",
+                                className: "flex h-min items-end",
                                 children: [
                                     /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                                         src: sakuraeng/* default */.Z,
@@ -588,359 +889,6 @@ const Footer = ()=>{
 
 /***/ }),
 
-/***/ 7184:
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "h": () => (/* binding */ Header)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5675);
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1664);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6197);
-/* harmony import */ var _public_sakuraeng_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9663);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_4__]);
-framer_motion__WEBPACK_IMPORTED_MODULE_4__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
-
-
-
-
-
-// import { useDimensions } from "./useDimention";
-
-const staggerMenuItems = (0,framer_motion__WEBPACK_IMPORTED_MODULE_4__.stagger)(0.1, {
-    startDelay: 0.15
-});
-function useMenuAnimation(isOpen) {
-    const [scope, animate] = (0,framer_motion__WEBPACK_IMPORTED_MODULE_4__.useAnimate)();
-    (0,react__WEBPACK_IMPORTED_MODULE_3__.useEffect)(()=>{
-        // animate(".arrow", { rotate: isOpen ? 180 : 0 }, { duration: 0.2 });
-        animate("ul", {
-            clipPath: isOpen ? "inset(0% 0% 0% 0% round 10px)" : "inset(10% 50% 90% 50% round 10px)"
-        }, {
-            type: "spring",
-            bounce: 0,
-            duration: 0.5
-        });
-        animate("li", isOpen ? {
-            opacity: 1,
-            scale: 1,
-            filter: "blur(0px)"
-        } : {
-            opacity: 0,
-            scale: 0.3,
-            filter: "blur(20px)"
-        }, {
-            duration: 0.2,
-            delay: isOpen ? staggerMenuItems : 0
-        });
-    }, [
-        isOpen
-    ]);
-    return scope;
-}
-const Path = (props)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.path, {
-        // fill="#fff"
-        strokeWidth: "3",
-        // stroke="rgb(255 255 255)"
-        className: "dark:fill-white dark:stroke-gray-100",
-        strokeLinecap: "round",
-        ...props
-    });
-const sidebar = {
-    open: (height = 1000)=>({
-            clipPath: `circle(${height * 2 + 200}px at calc( 100% - 30px ) 40px)`,
-            height: "100vh",
-            transition: {
-                type: "spring",
-                stiffness: 20,
-                restDelta: 2
-            }
-        }),
-    closed: {
-        // clipPath: "circle(30px at 40px 40px)",
-        clipPath: "circle(23px at calc( 100% - 28px ) 32px)",
-        height: "0vh",
-        transition: {
-            delay: 0.1,
-            type: "spring",
-            stiffness: 400,
-            damping: 40
-        }
-    }
-};
-const variants = {
-    open: {
-        transition: {
-            staggerChildren: 0.07,
-            delayChildren: 0.2
-        }
-    },
-    closed: {
-        transition: {
-            staggerChildren: 0.05,
-            staggerDirection: -1
-        }
-    }
-};
-const variants2 = {
-    open: {
-        y: 0,
-        opacity: 1,
-        transition: {
-            delay: 0.1,
-            y: {
-                stiffness: 1000,
-                velocity: -100
-            }
-        }
-    },
-    closed: {
-        y: 50,
-        opacity: 0,
-        transition: {
-            y: {
-                stiffness: 1000
-            }
-        }
-    }
-};
-const colors = (/* unused pure expression or super */ null && ([
-    "#FF008C",
-    "#D309E1",
-    "#9C1AFF",
-    "#7700FF",
-    "#4400FF"
-]));
-const Header = ()=>{
-    const [isOpen, setIsOpen] = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(false);
-    const scope = useMenuAnimation(isOpen);
-    const [isToggleOpen, toggleOpen] = (0,framer_motion__WEBPACK_IMPORTED_MODULE_4__.useCycle)(false, true);
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "fixed flex flex-row items-start justify-between overflow-visible opacity-80 border-gray-200 px-8 mx-auto w-full dark:bg-black bg-white h-14 z-40",
-        children: [
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                href: "/",
-                className: "h-auto pt-2 grid grid-flow-col gap-2 items-center",
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
-                        src: _public_sakuraeng_png__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z,
-                        alt: "sakura eng logo",
-                        className: "h-10 w-10"
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                        className: "hidden md:block text-black text-lg font-semibold whitespace-nowrap dark:text-white",
-                        children: "桜エンジニアリング"
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.nav, {
-                initial: false,
-                className: "md:hidden fixed top-0 right-0 bottom-0 opacity-100 w-[70vw] h-screen z-50",
-                animate: isToggleOpen ? "open" : "closed",
-                variants: sidebar,
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.div, {
-                        className: "background h-screen w-[70vw] bg-gray-900 text-gray-900 dark:bg-gray-900 dark:text-gray-100 opacity-100",
-                        variants: sidebar,
-                        animate: isToggleOpen ? "open" : "closed"
-                    }),
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.ul, {
-                        variants: variants2,
-                        className: "fixed top-20 pl-8",
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                    href: "/about",
-                                    className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
-                                    children: "私たちについて"
-                                })
-                            }),
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
-                                className: "grid gap-3",
-                                ref: scope,
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.button, {
-                                        whileTap: {
-                                            scale: 0.97
-                                        },
-                                        onClick: ()=>setIsOpen(!isOpen),
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "/#services",
-                                            className: "block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-400 text-gray-800",
-                                            children: "サービス"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                                        style: {
-                                            pointerEvents: isOpen ? "auto" : "none",
-                                            clipPath: "inset(10% 50% 90% 50% round 10px)",
-                                            color: "black",
-                                            backgroundColor: "black"
-                                        },
-                                        children: [
-                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                                    href: "services/homepage",
-                                                    className: "block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:text-gray-400 text-gray-800",
-                                                    children: "ホームページ"
-                                                })
-                                            }),
-                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                                    href: "services/kourituka",
-                                                    className: "block p-3 text-gray-800 hover:bg-gray-100  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300",
-                                                    children: "業務効率化"
-                                                })
-                                            })
-                                        ]
-                                    }),
-                                    " "
-                                ]
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                    href: "/blog",
-                                    className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
-                                    children: "ブログ"
-                                })
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                    href: "/contact",
-                                    className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
-                                    children: "お問い合わせ"
-                                })
-                            })
-                        ]
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
-                        onClick: ()=>toggleOpen(),
-                        className: "fixed top-5 right-4 ",
-                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("svg", {
-                            className: "",
-                            width: "23",
-                            height: "23",
-                            viewBox: "0 0 21 19",
-                            children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Path, {
-                                    variants: {
-                                        closed: {
-                                            d: "M 2 2.5 L 20 2.5"
-                                        },
-                                        open: {
-                                            d: "M 3 16.5 L 17 2.5"
-                                        }
-                                    }
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Path, {
-                                    d: "M 2 9.423 L 20 9.423",
-                                    variants: {
-                                        closed: {
-                                            opacity: 1
-                                        },
-                                        open: {
-                                            opacity: 0
-                                        }
-                                    },
-                                    transition: {
-                                        duration: 0.1
-                                    }
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Path, {
-                                    variants: {
-                                        closed: {
-                                            d: "M 2 16.346 L 20 16.346"
-                                        },
-                                        open: {
-                                            d: "M 3 2.5 L 17 16.346"
-                                        }
-                                    }
-                                })
-                            ]
-                        })
-                    })
-                ]
-            }),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                className: "hidden md:grid grid-flow-row md:grid-flow-col pt-4 gap-2 md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium",
-                children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                            href: "/aboutus",
-                            className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
-                            children: "無料お見積もり"
-                        })
-                    }),
-                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
-                        className: "grid gap-3",
-                        ref: scope,
-                        children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.button, {
-                                whileTap: {
-                                    scale: 0.97
-                                },
-                                onClick: ()=>setIsOpen(!isOpen),
-                                children: "サービス"
-                            }),
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                                className: "dark:bg-gray-900 dark:text-gray-100 bg-gray-200 text-gray-900",
-                                style: {
-                                    pointerEvents: isOpen ? "auto" : "none",
-                                    clipPath: "inset(10% 50% 90% 50% round 10px)"
-                                },
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#services",
-                                            className: "block p-3 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ",
-                                            children: "ホームページ"
-                                        })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "#services",
-                                            className: "block p-3  hover:bg-gray-100  dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300",
-                                            children: "業務効率化"
-                                        })
-                                    })
-                                ]
-                            }),
-                            " "
-                        ]
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                            href: "/blog",
-                            className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
-                            children: "ブログ"
-                        })
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                            href: "/contact",
-                            className: "text-gray-900 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 dark:text-white",
-                            children: "お問い合わせ"
-                        })
-                    })
-                ]
-            })
-        ]
-    });
-};
-
-__webpack_async_result__();
-} catch(e) { __webpack_async_result__(e); } });
-
-/***/ }),
-
 /***/ 9212:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -954,13 +902,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(108);
 /* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_Header_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7184);
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(787);
-/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4298);
-/* harmony import */ var next_script__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_script__WEBPACK_IMPORTED_MODULE_4__);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Header_index__WEBPACK_IMPORTED_MODULE_2__]);
-_components_Header_index__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
-
+/* harmony import */ var _components_always_Header_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7806);
+/* harmony import */ var _components_always_footer_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7122);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_always_Header_index__WEBPACK_IMPORTED_MODULE_2__]);
+_components_always_Header_index__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
@@ -969,25 +914,11 @@ function App({ Component , pageProps  }) {
     return(// 以下はid="__next"のディブタグにまとめられる
     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_4___default()), {
-                src: "https://www.googletagmanager.com/gtag/js?id=G-21V9JN6CTS"
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_4___default()), {
-                id: "google-analytics",
-                strategy: "afterInteractive",
-                children: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', ${process.env.GA4_MEASUREMENT_ID});
-        `
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Header_index__WEBPACK_IMPORTED_MODULE_2__/* .Header */ .h, {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_always_Header_index__WEBPACK_IMPORTED_MODULE_2__/* .Header */ .h, {}),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Component, {
                 ...pageProps
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Footer__WEBPACK_IMPORTED_MODULE_3__/* .Footer */ .$, {})
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_always_footer_index__WEBPACK_IMPORTED_MODULE_3__/* .Footer */ .$, {})
         ]
     }));
 }
@@ -1156,14 +1087,6 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ 6405:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("react-dom");
-
-/***/ }),
-
 /***/ 997:
 /***/ ((module) => {
 
@@ -1187,7 +1110,7 @@ module.exports = import("framer-motion");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [664,636,890], () => (__webpack_exec__(9212)));
+var __webpack_exports__ = __webpack_require__.X(0, [488,664,760,636,675,143], () => (__webpack_exec__(9212)));
 module.exports = __webpack_exports__;
 
 })();
