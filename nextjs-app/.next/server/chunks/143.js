@@ -33,10 +33,6 @@ const Constact = ()=>{
     }
     const submitEmail = async (e)=>{
         e.preventDefault();
-        console.log({
-            mailerState
-        });
-        console.log("submited Email");
         // const response = await fetch("https://api.sakura-eng.net", {
         // ↑2023/02/21削除代入いらない（？）
         await fetch("/api/send_mail", {
@@ -54,6 +50,7 @@ const Constact = ()=>{
                 alert("送信に失敗しました。");
                 throw new Error(response.statusText);
             }
+            console.log("メッセージの送信に成功しました");
             alert("メッセージの送信に成功しました");
             response.json();
         }).then(()=>{

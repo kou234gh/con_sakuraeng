@@ -9,9 +9,9 @@
   "/services/adssns": "pages/services/adssns.html",
   "/services/dataanalytics": "pages/services/dataanalytics.html",
   "/": "pages/index.html",
+  "/_document": "pages/_document.js",
   "/services/homepage": "pages/services/homepage.html",
   "/services": "pages/services.html",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/404": "pages/404.html"
 }
