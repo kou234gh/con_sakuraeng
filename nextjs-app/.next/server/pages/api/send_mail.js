@@ -37,7 +37,7 @@ __webpack_require__.r(__webpack_exports__);
 // }
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(req, res) {
     (__webpack_require__(5142).config)();
-    console.log(req.body);
+    console.log("---api/send_mail.ts----------------------------");
     const type = req.body.type;
     const service = req.body.service;
     const name = req.body.name;
@@ -68,12 +68,19 @@ __webpack_require__.r(__webpack_exports__);
         if (err) {
             console.log("errです");
             console.log(err);
+            res.status(404).json({
+                error: `Connection refused at ${err.address}`
+            });
         } else {
             console.log("infoです");
             console.log(info);
+            res.status(200).json({
+                success: `Message delivered to ${info.accepted}`
+            });
         }
     });
-    res.status(200);
+    // res.status( 200 )
+    console.log("---api/send_mail.ts----------------------------");
 }
 
 

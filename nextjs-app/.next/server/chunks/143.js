@@ -33,39 +33,40 @@ const Constact = ()=>{
     }
     const submitEmail = async (e)=>{
         e.preventDefault();
-        // const response = await fetch("https://api.sakura-eng.net", {
-        // ↑2023/02/21削除代入いらない（？）
-        await fetch("/api/send_mail", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify(mailerState)
-        }).then((response)=>{
-            if (!response.ok) {
-                // console.error("41行めのエラー")
-                console.error("response.ok:", response.ok);
-                console.error("esponse.status:", response.status);
-                console.error("esponse.statusText:", response.statusText);
-                alert("送信に失敗しました。");
-                throw new Error(response.statusText);
-            }
-            console.log("メッセージの送信に成功しました");
-            alert("メッセージの送信に成功しました");
-            response.json();
-        }).then(()=>{
-            setMailerState({
-                type: "",
-                service: "",
-                name: "",
-                email: "",
-                tel: "",
-                message: ""
+        //
+        // await fetch( "/api/send_mail", {
+        try {
+            const res = await fetch("/api/send_mail", {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(mailerState)
             });
-        }).catch((error)=>{
+            if (res.status !== 200) {
+                // console.error("41行めのエラー")
+                console.error("res.ok:", res.ok);
+                console.error("esponse.status:", res.status);
+                console.error("esponse.statusText:", res.statusText);
+                alert("送信に失敗しました。");
+                throw new Error(res.statusText);
+            } else if (res.status === 200) {
+                console.log("メッセージの送信に成功しました");
+                alert("送信成功しました。");
+                setMailerState({
+                    type: "",
+                    service: "",
+                    name: "",
+                    email: "",
+                    tel: "",
+                    message: ""
+                });
+            }
+        // response.json();
+        } catch (e) {
             alert("現在通信エラーが発生しております。");
-            console.error("通信に失敗しました。これはcatch内のエラー文です。", error);
-        });
+            console.error("通信に失敗しました。これはcatch内のエラー文です。", e);
+        }
     };
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
         id: "contact",
@@ -93,7 +94,7 @@ const Constact = ()=>{
                                     ]
                                 }),
                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("select", {
-                                    className: "text-sm h-10 w-full max-w-xs p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md",
+                                    className: "text-base h-10 w-full max-w-xs p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md",
                                     // placeholder=""
                                     onChange: handleStateChange,
                                     name: "type",
@@ -202,7 +203,7 @@ const Constact = ()=>{
                                     ]
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
-                                    className: "text-sm h-10  md:w-min p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md",
+                                    className: "text-sm h-10 w-[80%] max-w-[15rem] p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md",
                                     placeholder: "例）00-0000-0000",
                                     onChange: handleStateChange,
                                     name: "tel",
@@ -218,7 +219,7 @@ const Constact = ()=>{
                                     children: "メールアドレス"
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
-                                    className: "text-sm h-10  md:w-min p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md",
+                                    className: "text-sm h-10 max-w-xs w-[80%] p-2 border-[1px] border-[#999999] bg-[#ffffff] rounded-md",
                                     placeholder: "example@gmail.com",
                                     onChange: handleStateChange,
                                     name: "email",
