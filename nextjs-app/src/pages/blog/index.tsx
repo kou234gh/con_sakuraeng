@@ -50,11 +50,13 @@ Blog.getInitialProps = async ( ctx: any ) => {
     // const res = await axios.get( 'http://127.0.0.1:1337/api/teches' );
     const res = await axios.get( 'http://127.0.0.1:1337/api' );
     const teches = res;
+    console.log(teches)
     // console.log("getinitialprops---------------------")
     // console.log( teches.data )
     // console.log("------------------------")
     return { teches };
   } catch ( error ) {
+    console.log(error)
     return { error };
   }
 };
