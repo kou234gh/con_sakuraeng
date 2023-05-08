@@ -16,7 +16,8 @@ const Blog = ( { teches }: any ) => {
       >
         {/* <Link href={`blog/1`}>to /blog/1</Link> */}
         <ul className="grid grid-rows-4 grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2">
-          {teches.data.map( ( tech: any ) => (
+          {teches}
+          {/* {teches.data.map( ( tech: any ) => (
             <Link
               href={{
                 pathname: `/blog/${ tech.id }`,
@@ -27,13 +28,15 @@ const Blog = ( { teches }: any ) => {
               }}
               className="rounded-2xl bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 p-4 flex flex-col relative undefined"
               key={tech.id}
-            >
+            > */}
+            <Link href={"#"}>
               <li className="border-solid border dark:border-gray-200 border-gray-800 p-4" >
-                <h2>{tech.attributes.Name}</h2>
-                <p className="overflow-hidden">{tech.attributes.Description}</p>
+                {/* <h2>{tech.attributes.Name}</h2> */}
+                {/* <p className="overflow-hidden">{tech.attributes.Description}</p> */}
+                <p className="overflow-hidden">{teches}</p>
               </li>
             </Link>
-          ) )}
+          {/* ) )} */}
         </ul>
       </div>
 
@@ -44,8 +47,9 @@ const Blog = ( { teches }: any ) => {
 Blog.getInitialProps = async ( ctx: any ) => {
 
   try {
-    const res = await axios.get( 'http://127.0.0.1:1337/api/teches' );
-    const teches = res.data;
+    // const res = await axios.get( 'http://127.0.0.1:1337/api/teches' );
+    const res = await axios.get( 'http://127.0.0.1:1337/api' );
+    const teches = res;
     // console.log("getinitialprops---------------------")
     // console.log( teches.data )
     // console.log("------------------------")
