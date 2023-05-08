@@ -7,10 +7,10 @@
   "/blog/[id]": "pages/blog/[id].js",
   "/blog": "pages/blog.js",
   "/contact": "pages/contact.html",
-  "/": "pages/index.html",
-  "/services/adssns": "pages/services/adssns.html",
   "/services/dataanalytics": "pages/services/dataanalytics.html",
   "/services/homepage": "pages/services/homepage.html",
+  "/": "pages/index.html",
+  "/services/adssns": "pages/services/adssns.html",
   "/services": "pages/services.html",
   "/_error": "pages/_error.js",
   "/404": "pages/404.html"

@@ -35,30 +35,21 @@ const Blog = ({ teches  })=>{
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "flex-1 p-4 lg:p-6",
-                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
                     className: "grid grid-rows-4 grid-cols-1 gap-4 md:grid-rows-2 md:grid-cols-2",
-                    children: teches.data.map((tech)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                            href: {
-                                pathname: `/blog/${tech.id}`,
-                                query: {
-                                    tag: "teches",
-                                    id: tech.id
-                                }
-                            },
-                            className: "rounded-2xl bg-white backdrop-filter backdrop-blur-lg bg-opacity-20 p-4 flex flex-col relative undefined",
-                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
+                    children: [
+                        teches,
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                            href: "#",
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                                 className: "border-solid border dark:border-gray-200 border-gray-800 p-4",
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                                        children: tech.attributes.Name
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                        className: "overflow-hidden",
-                                        children: tech.attributes.Description
-                                    })
-                                ]
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    className: "overflow-hidden",
+                                    children: teches
+                                })
                             })
-                        }, tech.id))
+                        })
+                    ]
                 })
             })
         ]
@@ -66,8 +57,10 @@ const Blog = ({ teches  })=>{
 };
 Blog.getInitialProps = async (ctx)=>{
     try {
-        const res = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("http://127.0.0.1:1337/api/teches");
-        const teches = res.data;
+        // const res = await axios.get( 'http://127.0.0.1:1337/api/teches' );
+        const res = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("http://127.0.0.1:1337/api");
+        const teches = res;
+        console.log(teches);
         // console.log("getinitialprops---------------------")
         // console.log( teches.data )
         // console.log("------------------------")
@@ -75,6 +68,7 @@ Blog.getInitialProps = async (ctx)=>{
             teches
         };
     } catch (error) {
+        console.log(error);
         return {
             error
         };

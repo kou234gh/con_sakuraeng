@@ -51,12 +51,15 @@ const Blog = ({ data  })=>{
 };
 Blog.getInitialProps = async (ctx)=>{
     try {
-        const res = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(`http://127.0.0.1:1337/api/teches`);
-        const data = res.data;
+        const res = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get(`http://127.0.0.1:1337/api/`);
+        // const res = await axios.get( `http://127.0.0.1:1337/api/teches` );
+        const data = res;
+        console.log(data);
         return {
             data
         };
     } catch (error) {
+        console.log("error:" + error);
         return {
             error
         };
